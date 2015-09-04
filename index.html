@@ -33,62 +33,33 @@
 	</script>
 
 	<!-- Modernizr -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>-->
 
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<!--  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
-<!--  	<script type="text/javascript">
-  	$(function() {
-    // Stick the #nav to the top of the window
-    var nav = $('#nav');
-    var navHomeY = nav.offset().top;
-    var isFixed = false;
-    var $w = $(window);
-    $w.scroll(function() {
-        var scrollTop = $w.scrollTop();
-        var shouldBeFixed = scrollTop > navHomeY;
-        if (shouldBeFixed && !isFixed) {
-            nav.css({
-                position: 'fixed',
-                top: 0,
-                left: nav.offset().left,
-                width: nav.width()
-            });
-            isFixed = true;
-        }
-        else if (!shouldBeFixed && isFixed)
-        {
-            nav.css({
-                position: 'static'
-            });
-            isFixed = false;
-        }
-    	});
-	});
-  	</script>-->
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+  	<script src="./js/jquery-1.11.3.min.js"></script>
+  	<script src="./js/bootstrap.min.js"></script>
 </head>
 
 
 <body>	
-        <nav class="navbar navbar-default" id="#nav">
+        <nav class="navbar navbar-default navbar-fixed-top" id="nav">
   			<div class="container-fluid">
 	    		<div class="nav_position">
-	     			 <ul class="nav navbar-nav">
-				       	<li><a href="index.html">HOME</a></li>
-				        <li><a href="#">PROJECTS</a></li>
-				        <li><a href="skill.html">SKILLS</a></li>
-				        <li><a href="#">COURSES</a></li>
-				        <li><a href="#">ABOUT <span>ME</span></a></li>
-	     			 </ul>
+	     			<ul class="nav navbar-nav">
+				        <li class="active"><a href="index.html">HOME</a></li>
+				        <li class="disable"><a href="project.html#contentsummary">PORTFOLIO</a></li>
+				        <li class="disable"><a href="skill.html#contentsummary">SKILLS</a></li>
+				        <li class="disable"><a href="course.html#contentsummary">COURSES</a></li>
+				        <li class="disable"><a href="about.html">ABOUT <span>ME</span></a></li>
+	     			</ul>
 	    		</div>
  			</div>
 		</nav>
 		<!-- Header -->
 
-		<div class="cover">
+		<div class="indexCover cover">
 			
-			<div class="regular" style="background-image: url('css/images/green.jpg')"></div>
+			<div class="regular" style="background-image: url('img/ny.jpg')"></div>
 		</div>
 
 		
@@ -98,7 +69,7 @@
 			
 					<div class="avatar">
 						<span class="avatar-container avatar-large">
-						  <img src="css/images/logo.jpg" alt="Jessica Zhang" class="avatar-image">
+						  <img src="img/logo.jpg" alt="Jessica Zhang" class="avatar-image">
 						</span>	
 					</div>
 					<h1 class="signiture">Xieqi Zhang</h1>	
@@ -110,11 +81,8 @@
 					<svg class="icon animated icon-tools"
 					viewBox="0 0 32 32"><use xlink:href="#icon-tools"></use></svg>
 	-->
-					<p>First year Masters Candidate in Performance Management career path. 
-					Passionate on consumer studies and data analysis field. With solid qualitative market research capability, 
-					strategy planning and graphic design skills in undergraduate study. First-year graduate study will focus on 
-					statistical analysis with quantitative methods using Excel and R in data analysis.</p>
-					<div class="resume-button"><a href="doc/zxq resume.pdf" class="resume">Resume</a></div>
+					<p>Hello, I'm Xieqi Zhang, a front end developer and graphic designer currently studying Public Administration at Rutgers, the State University of New Jersey. I am passionate about new technologies and ideas. I enjoy planning marketing campaigns with strategies and creations.</p>
+					<div class="resume-button"><a href="doc/zxq_resume.pdf" target="_blank" class="resume">Resume</a></div>
 				</section>
 				<br>
 				<br>
@@ -156,9 +124,7 @@
 		</div>
 	
 	
-	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="js/freemason.min.js"></script>
-	<script src="js/rift.min.js"></script>
+	<script src="./js/jquery-1.11.3.min.js"></script>
 	<script src="js/script.js"></script>
 
 

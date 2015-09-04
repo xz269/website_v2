@@ -19,10 +19,9 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	
-	<!-- Google Fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
+
 	
-	<!-- Google Analytics -->
+	<!-- Google Analytics 
 	<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -31,14 +30,14 @@
 
 		  ga('create', 'UA-65724436-1', 'auto');
 		  ga('send', 'pageview');
-	</script>
+	</script>-->
 
 	<!-- Modernizr -->
-<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>-->
+	<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>-->
 
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+  	<script src="./js/jquery-1.11.3.min.js"></script>
+  	<script src="./js/bootstrap.min.js"></script>
 	<script type="text/javascript">
  	  function showhide(id, icon) {
    	  var e = document.getElementById(id);
@@ -55,100 +54,543 @@
 
 
 <body>	
-        <nav class="navbar navbar-default" id="#nav">
+       <nav class="navbar navbar-default navbar-fixed-top" id="nav">
   			<div class="container-fluid">
 	    		<div class="nav_position">
 	     			 <ul class="nav navbar-nav">
-				       	<li><a href="index.html">HOME</a></li>
-				        <li><a href="#">PROJECTS</a></li>
-				        <li><a href="skill.html">SKILLS</a></li>
-				        <li><a href="#">COURSES</a></li>
-				        <li><a href="#">ABOUT <span>ME</span></a></li>
-	     			 </ul>
+				        <li class="disable"><a href="index.html">HOME</a></li>
+				        <li class="disable"><a href="project.html#contentsummary">PORTFOLIO</a></li>
+				        <li class="active"><a href="skill.html#contentsummary">SKILLS</a></li>
+				        <li class="disable"><a href="course.html#contentsummary">COURSES</a></li>
+				        <li class="disable"><a href="about.html">ABOUT <span>ME</span></a></li>
+	     			</ul>
 	    		</div>
  			</div>
 		</nav>
 		<!-- Header -->
 
-		<div class="cover"><div class="regular" style="background-image: url('css/images/green.jpg')"></div></div>
+		<div class="cover"><div class="regular" style="background-image: url('img/ny.jpg')"></div></div>
 
 		
-		<div class="foreground">
+		<div class="foreground" id="contentsummary">
 		  <!-- header -->
 		  <header class="skillprofile">
-		    <h1>SKILLS</h1>
+		  	<br>
+		  	<br>
+		  	<br>
+		  	<!--
+		    <figture>
+			    <img src="img/productManager.png" alt="myGoal" id="myGoal">
+			</figture>
 		  </header>
- <section class="skillset">
+			-->
+		  <!-- ********************************************************* Skills Listing here *********************************************************-->
+ 		<section class="skillset">
 		    <ul>
-		      <li>
-			
-			<a href="javascript:showhide('uniquename','tri1')">
-			  <svg class="triangle" viewBox="0 0 30 30" id="tri1">
-			    <use xlink:href="#icon-triangle"></use>
-			  </svg>
-			  JavaScript
-			</a>
-			
-			<div id="uniquename" style="display:none;">
-			  <p>Content goes here.<br>
-			    Content goes here.<br>
-			    Content goes here.<br>
-			    Content goes here.
-			  </p>
-			</div>
-		      </li>
+		    	<li>
+		    		  <!-- ********************************************************* Skill 1 *********************************************************-->
+					<a href="javascript:showhide('skill_catalogy_1','tri1')"> 
+					  Engineering
+					</a>
+					<!--hidden part-->
+					<div id="skill_catalogy_1" subsetMark="1">
+							<ul>
+								<li>
+					  				<a href="javascript:showhide('skill_catalogy_1_skill1','tri1_1')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri1_1">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+					  				Java
+									</a>
+
+									<div id="skill_catalogy_1_skill1" style="display:none;" contentMark="1">
+									  <p>
+										Learn Java at De Anza College during the summer quarter. Be able to understand:
+										<ul class="disc">
+										   <li>Class Concept</li>
+										   <li>Variables declaration, assignment and constant definition.</li>
+										   <li>User Interaction in both Command line(Scanner) and Simple User Interface(JPanel).</li>
+										   <li>Decision Statements. (if statement, switch cases)</li>
+										   <li>Control Flow. (for loop, while loop)</li>
+										   <li>Methods declaration and basic codes refactoring.</li>
+										   <li>Arrays and ArrayList.</li>
+										   <li>Basic Java Exception handling.</li>
+										   <li>File I/O</li>
+										</ul>
+										Java Code I have written can be found at: <a href="https://github.com/xz269/Intro-to-java" target="_blank">Here</a>
+									  </p>
+									</div>
+								</li>
+								<li>
+									<a href="javascript:showhide('skill_catalogy_1_skill2','tri1_2')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri1_2">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		HTML & CSS
+									</a>
+
+									<div id="skill_catalogy_1_skill2" style="display:none;" contentMark="1">
+										 <p>
+										Learn from both Hong Kong Baptist University and De Anza College. Including the following topics:
+										<ul class="disc">
+										   <li>HTML and HTML5 elements</li>
+										   <li>Entities and Validation</li>
+										   <li>HTML5 Visual Elements</li>
+										   <li>CSS3</li>
+										   <li>HTML5 Form controls</li>
+										   <li>Box Models</li>
+										   <li>Layout with Styles</li>
+										   <li>Tables</li>
+										   <li>Multimedia</li>
+										   <li>Animation</li>
+										</ul>
+										HTML/CSS Code I have written can be found at: <a href="https://github.com/xz269/HTML_CSS_labs" target="_blank">Here</a>
+										<br>A running instance of the code above can be found at: <a href="http://xieqizhang.com/htmlcourse/" target="_blank">Here</a>
+									  </p>
+									</div>
+								</li>
+								<!--<li>
+									<a href="javascript:showhide('skill_catalogy_1_skill3','tri1_3')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri1_3">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		JavaScript
+									</a>
+
+									<div id="skill_catalogy_1_skill3" style="display:none;" contentMark="1">
+									  <p>Content goes here.<br>
+									    Content goes here.<br>
+									    Content goes here.<br>
+									    Content goes here.
+									  </p>
+									</div>
+								</li>-->
+								<li>
+									<a href="javascript:showhide('skill_catalogy_1_skill4','tri1_4')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri1_3">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Github
+									</a>
+
+									<div id="skill_catalogy_1_skill4" style="display:none;" contentMark="1">
+									  <p>
+									    Picked up Github by constantly pushing my code onto it.
+									    Have basic understanding on commit, push and merge operations.
+									  </p>
+									</div>
+								</li>
+<!--								<li>
+									<a href="javascript:showhide('skill_catalogy_1_skill5','tri1_5')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri1_3">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		R Statistical Computing Language
+									</a>
+
+									<div id="skill_catalogy_1_skill5" style="display:none;" contentMark="1">
+									  <p>Content goes here.<br>
+									    Content goes here.<br>
+									    Content goes here.<br>
+									    Content goes here.
+									  </p>
+									</div>
+								</li>-->
+								<li>
+									<a href="javascript:showhide('skill_catalogy_1_skill6','tri1_6')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri1_3">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Amazon EC2 Web Server
+									</a>
+
+									<div id="skill_catalogy_1_skill6" style="display:none;" contentMark="1">
+									  <p>Configurated an Amazon EC2 Server for hosting my personal website by taking advantage of the attributes of public_html. 
+									  </p>
+									</div>
+								</li>
+							</ul>
+					</div>
+		      	</li>
+					<!-- ********************************************************* Skill 2: Programming language*********************************************************-->
 					
-		      <li><a href="javascript:showhide('uniquename2', 'tri2')">
-		      	<svg class="triangle" viewBox="0 0 30 30" id="tri2">
-			    <use xlink:href="#icon-triangle"></use>
-			  </svg>
-			  SKILL TWO
-			</a>
-			
-			<div id="uniquename2" style="display:none;">
-			  <p>Content goes here.<br>
-			    Content goes here.<br>
-			    Content goes here.<br>
-			    Content goes here.
-			  </p>
-			</div>
+		      	<li>
+				    <a href="javascript:showhide('skill_catalogy_2', 'tri2')">
+					  UX / UI Design
+					</a>
+
+					<div id="skill_catalogy_2" subsetMark="1">
+							<ul>
+								<li>
+					  				<a href="javascript:showhide('skill_catalogy_2_skill1','tri2_1')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri2_1">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+					  				Photoshop
+									</a>
+
+									<div id="skill_catalogy_2_skill1" style="display:none;" contentMark="1">
+									  <p>Learned from the course named Computer Visual Design at Hong Kong Baptist University. 
+									  <br>Keep using this skill in many of my project.
+									  <br>Graphic design I have done can be found at: <a href="https://www.behance.net/xz269" target="_blank">Here</a>
+									  </p>
+									</div>
+								</li>
+								<li>
+									<a href="javascript:showhide('skill_catalogy_2_skill2','tri2_2')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri2_2">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Adobe Illustrator
+									</a>
+
+									<div id="skill_catalogy_2_skill2" style="display:none;" contentMark="1">
+									  <p>Learned from the course named Computer Visual Design at Hong Kong Baptist University. 
+									  <br>Keep using this skill in many of my project.
+									  <br>Graphic design I have done can be found at: <a href="https://www.behance.net/xz269" target="_blank">Here</a>
+									  </p>
+									</div>
+								</li>
+								<li>
+									<a href="javascript:showhide('skill_catalogy_2_skill3','tri2_3')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri2_3">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Adobe Dreamweaver
+									</a>
+
+									<div id="skill_catalogy_2_skill3" style="display:none;" contentMark="1">
+									  <p>Self learned Dreamweaver from the video sources provided by Adobe.
+									  </p>
+									</div>
+								</li>
+								<li>
+									<a href="javascript:showhide('skill_catalogy_2_skill4','tri2_4')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri2_4">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Balsamiq Mockups
+									</a>
+
+									<div id="skill_catalogy_2_skill4" style="display:none;" contentMark="1">
+									  <p>Self learned Balsamiq Mockups, using Balsamiq Mockups to create website user interface mockups. 
+									  </p>
+									</div>
+								</li>
+							</ul>
+					</div>
 		      </li>
-		      <li><a href="javascript:showhide('uniquename3', 'tri3')">
-		      	<svg class="triangle" viewBox="0 0 30 30" id="tri3">
-			    <use xlink:href="#icon-triangle"></use>
-			  </svg>
-			  SKILL THREE
-			</a>
-			
-			<div id="uniquename3" style="display:none;">
-			  <p>Content goes here.<br>
-			    Content goes here.<br>
-			    Content goes here.<br>
-			    Content goes here.
-			  </p>
-			</div>
+		      <li>
+				    <a href="javascript:showhide('skill_catalogy_3', 'tri3')">
+					Business
+					</a>
+
+					<div id="skill_catalogy_3" subsetMark="1">
+							<ul>
+								<li>
+					  				<a href="javascript:showhide('skill_catalogy_3_skill1','tri3_1')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri3_1">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+					  				Marketing
+									</a>
+
+									<div id="skill_catalogy_3_skill1" style="display:none;" contentMark="1">
+									  <p>Learned Marketing Knowledge from Hong Kong Baptist University. 
+									  	<ul class="disc">
+										   <li>Situation Analysis</li>
+										   <li>Analyzing Marketing Opportunities</li>
+										   <li>Identifying and Selecting Target Markets and Market Segments</li>
+										   <li>Marketing strategies</li>
+										   <li>Planning marketing programs</li>
+										</ul>
+										Practising marketing skills in school projects and summer interships.
+									  </p>
+									</div>
+								</li>
+								<li>
+									<a href="javascript:showhide('skill_catalogy_3_skill2','tri3_2')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri3_2">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Business Research
+									</a>
+
+									<div id="skill_catalogy_3_skill2" style="display:none;" contentMark="1">
+									  <p>Learned business research skills from Hong Kong Baptist University.
+									  	<ul class="disc">
+										   <li>Marketing Research</li>
+										   <li>Public Relations and Advertising Research</li>
+										   <li>Qualitative research methodologies such as focus group, in-depth interviews, experiment, etc.</li>
+										   <li>Quantitatve research methodologies such as survey, content analysis, etc.</li>
+										</ul>
+										Research projects I have done can be found at: <a href="http://xieqizhang.com/project.html#contentsummary" target="_blank">Here</a>
+									  </p>
+									</div>
+								</li>
+								<li>
+									<a href="javascript:showhide('skill_catalogy_3_skill3','tri3_3')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri3_3">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Statistics and Data Analysis
+									</a>
+
+									<div id="skill_catalogy_3_skill3" style="display:none;" contentMark="1">
+									   <p>Learned Statistics and Data Analysis skills from Hong Kong Baptist University and Rutgers University.
+									  	<ul class="disc">
+										   <li>Basic Statistics Terminology</li>
+										   <li>Null Hypothesis and Alternative Hypothesis</li>
+										   <li>Interval estimation</li>
+										   <li>Significance</li>
+										   <li>Correlation</li>
+										</ul>
+									  </p>
+									</div>
+								</li>
+								<li>
+									<a href="javascript:showhide('skill_catalogy_3_skill4','tri3_4')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri3_4">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Consumer Behavior
+									</a>
+
+									<div id="skill_catalogy_3_skill4" style="display:none;" contentMark="1">
+									  <p>learned Consumer Behavior Analysis Skill from Hong Kong Baptist University.
+									  	<ul class="disc">
+										   <li>Consumer Behavior Models</li>
+										   <li>Consumer Purchase Decision-Marking Process</li>
+										   <li>Social Factors Affecting the Purchase Decision</li>
+										   <li>Psychological Factors Affecting the Purchase Decision</li>
+										   <li>Income impact on the Purchase Decision</li>
+										   <li>Marketing Factors Affecting the Purchase Decision</li>
+										</ul>
+									  </p>
+									</div>
+								</li>
+								<li>
+									<a href="javascript:showhide('skill_catalogy_3_skill5','tri3_5')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri3_5">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Strategic Planning
+									</a>
+
+									<div id="skill_catalogy_3_skill5" style="display:none;" contentMark="1">
+									  <p>Learned Strategic Planning Skills in both Hong Kong Baptist University and Rutgers University.
+									  	<ul class="disc">
+										   <li>Strategic Planning Models and Theories</li>
+										   <li>Practise this skills in my projects and internship</li>
+										</ul>
+										Projects I have done can be found at: <a href="http://xieqizhang.com/project.html#contentsummary" target="_blank">Here</a>
+									  </p>
+									</div>
+								</li>
+								<li>
+									<a href="javascript:showhide('skill_catalogy_3_skill6','tri3_6')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri3_6">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Human Resources Management
+									</a>
+
+									<div id="skill_catalogy_3_skill6" style="display:none;" contentMark="1">
+									  <p>learn Human Resources Management Skill in Rutgers University.
+									  	<ul class="disc">
+										   <li>Basic Human Resources Theories</li>
+										   <li>Strategic Human Resources Management and Planning</li>
+										   <li>Managing a Diverse Workforce</li>
+										   <li>Job Analysis</li>
+										   <li>Recruitment and Selection process</li>
+										   <li>Compensation and Benefits Analysis</li>
+										   <li>Training and Career Development</li>
+										   <li>Performance Management of the Human Resources</li>
+										   <li>Labor-Management Relation and Bargaining</li>
+										   <li>Volunteers Selection and Training</li>
+										</ul>
+									  </p>
+									</div>
+								</li>
+								<li>
+									<a href="javascript:showhide('skill_catalogy_3_skill7','tri3_7')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri3_7">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Organization Management
+									</a>
+
+									<div id="skill_catalogy_3_skill7" style="display:none;" contentMark="1">
+									  <p>Learn Organization Management knowledge in Rutgers University. 
+									  	<ul class="disc">
+										   <li>The Environment Analysis of an Organization</li>
+										   <li>Organization Structure</li>
+										   <li>Organizational Culture</li>
+										   <li>Managing and Motivating People</li>
+										   <li>Strategic Planning</li>
+										   <li>Performance Management</li>
+										   <li>Managing Citizen Involvement</li>
+										   <li>Government Contracting</li>
+										   <li>Managing Organizational Change and Innovation</li>
+										</ul>
+									  </p>
+									</div>
+								</li>
+							</ul>
+					</div>
 		      </li>
-		      <li><a href="javascript:showhide('uniquename4', 'tri4')">
-		      	<svg class="triangle" viewBox="0 0 30 30" id="tri4">
-			    <use xlink:href="#icon-triangle"></use>
-			  </svg>
-			  SKILL FOUR
-			</a>
-			
-			<div id="uniquename4" style="display:none;">
-			  <p>Content goes here.<br>
-			    Content goes here.<br>
-			    Content goes here.<br>
-			    Content goes here.
-			  </p>
-			</div>
+
+		       <li>
+				    <a href="javascript:showhide('skill_catalogy_4', 'tri4')">
+					Communication
+					</a>
+
+					<div id="skill_catalogy_4" subsetMark="1">
+							<ul>
+								<li>
+					  				<a href="javascript:showhide('skill_catalogy_4_skill1','tri4_1')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri4_1">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+					  				Integrated Marketing Communication
+									</a>
+
+									<div id="skill_catalogy_4_skill1" style="display:none;" contentMark="1">
+									  <p>learned Integrated Marketing Communication Skill from Hong Kong Baptist University. 
+									  	<ul class="disc">
+										   <li>Organization Culture</li>
+										   <li>Marketing Mix</li>
+										   <li>Co-Marketing Analysis</li>
+										   <li>Integrated Marketing Communication Models and Strategis</li>
+										   <li>Media Relations</li>
+										   <li>Branding</li>
+										</ul>
+									  </p>
+									</div>
+								</li>
+								<li>
+									<a href="javascript:showhide('skill_catalogy_4_skill2','tri4_2')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri4_2">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Public Relation / Advertising Strategic Planning and Management
+									</a>
+
+									<div id="skill_catalogy_4_skill2" style="display:none;" contentMark="1">
+									  <p>learned PR and Advertising Strategic Planning and Management Skills from Hong Kong Baptist University. 
+									  	<ul class="disc">
+										   <li>Planning PR and Advertising Proposals</li>
+										   <li>Implement Proposals and Management</li>
+										</ul>
+										PR and Advertising Planning Projects I have done can be found at: <a href="http://xieqizhang.com/project.html#contentsummary" target="_blank">Here</a>
+									  </p>
+									</div>
+								</li>
+								<!--
+								<li>
+									<a href="javascript:showhide('skill_catalogy_4_skill3','tri4_3')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri4_3">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Communication Research 
+									</a>
+
+									<div id="skill_catalogy_4_skill3" style="display:none;" contentMark="1">
+									  <p>Content goes here.<br>
+									    Content goes here.<br>
+									    Content goes here.<br>
+									    Content goes here.
+									  </p>
+									</div>
+								</li>
+							-->
+								<li>
+									<a href="javascript:showhide('skill_catalogy_4_skill4','tri4_4')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri4_4">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Professional Communication Skill
+									</a>
+
+									<div id="skill_catalogy_4_skill4" style="display:none;" contentMark="1">
+									  <p>Learned Professional Communication Skill from Hong Kong Baptist University.
+									  	<ul class="disc">
+										   <li>Professional Communication Theory</li>
+										   <li>Technical writing</li>
+										   <li>Virtual training</li>
+										   <li>In-person communication</li>
+										</ul>
+									  </p>
+									</div>
+								</li>
+								<li>
+									<a href="javascript:showhide('skill_catalogy_4_skill5','tri4_5')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri4_5">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Interpersonal Communication and Persuasion
+									</a>
+
+									<div id="skill_catalogy_4_skill5" style="display:none;" contentMark="1">
+									  <p>Learned Interpersonal Communication and Persuasion skills from Hong Kong Baptist University.
+									  	<ul class="disc">
+										   <li>Cross-cultural communication</li>
+										   <li>Emotional Intelligence</li>
+										   <li>Verbal and Non-Verbal Communication</li>
+										   <li>Principles of Interpersonal Communication</li>
+										   <li>Personal Appearance</li>
+										   <li>Stereotype in Interpersonal Communication</li>
+										   <li>Theories of Persuasion</li>
+										</ul>
+									  </p>
+									</div>
+								</li>
+								<li>
+									<a href="javascript:showhide('skill_catalogy_4_skill6','tri4_6')">
+							  			<svg class="triangle" viewBox="0 0 30 30" id="tri4_6">
+							   					<use xlink:href="#icon-triangle"></use>
+							  			</svg>
+							  		Emotional Intelligence
+									</a>
+
+									<div id="skill_catalogy_4_skill6" style="display:none;" contentMark="1">
+									  <p>Had Emotional Intelligence trainning from Hong Kong Baptist University. 
+									  	<ul class="disc">
+										   <li>Perceiving Emotions</li>
+										   <li>Using Emotions</li>
+										   <li>Understanding Emotions</li>
+										   <li>Managing Emotions</li>
+										   <li>Virtual Practice</li>
+										</ul>
+									  </p>
+									</div>
+								</li>
+							</ul>
+					</div>
+		      </li>
+
+		       <li>
+				    <a href="javascript:showhide('skill_catalogy_5', 'tri5')">
+					Agile Methodology
+					</a>
+
+					<div id="skill_catalogy_5" style="display:none;" subsetMark="1">
+						  <p>Self-learned Agile Methodology knowledge, and strenghten this skills by utilizing this Methodology in one of my projects. 
+						  	<ul class="disc">
+							   <li>Understand Scrum Cycle and Sprint</li>
+							   <li>Scrum Roles Analysis</li>
+							   <li>Backlog Refinement</li>
+							   <li>Sprint Meeting</li>
+							</ul>
+						  </p>
+					</div>
 		      </li>
 		    </ul>		 	
 		  </section>
 		  <br>
 		  <br>
 
-		  <!-- footer -->
+		  <!-- ********************************************************* footer *********************************************************-->
 		  <footer class="footer">
 		    <section class="container">
 		     <ul class="links">
@@ -161,15 +603,6 @@
 									<span class="link-to">LinkedIn</span>
 								</a>
 							</li>
-<!--							<li>
-								<a class="behance" href="http://www.behance.com/xz269"target="_blank">
-								<svg class="icon animated icon-behance" viewBox="0 0 30 30">
-									<use xlink:href="#icon-behance"></use>
-								</svg>
-								<span class="visually-hidden">Behance</span>
-								<span class="link-to">Behance</span>
-								</a>
-							</li>-->
 							<li>
 								<a class="github" href="https://github.com/xz269" target="_blank">
 									<svg class="icon animated icon-github" viewBox="0 0 32 32">
@@ -186,9 +619,8 @@
 		</div>
 		
 		
-		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-		<script src="js/freemason.min.js"></script>
-		<script src="js/rift.min.js"></script>
+		
+		
 		<script src="js/script.js"></script>
 		
 		
@@ -231,10 +663,3 @@
 		</svg>
 </body>
 </html>
-
-
-
-
-
-		  <!-- about -->
-<!--		 -->
