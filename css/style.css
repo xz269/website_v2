@@ -31,12 +31,6 @@ body {
   outline: none; 
 }
 
-@media screen and (min-width: 62.5em) {
-  font-size: 100%; 
-}
-@media screen and (min-width: 40em) {
-  font-size: 85%; 
-}
 /* COLOR DEFINITIONS */
 /* 	HEADER */
 .header {
@@ -44,11 +38,13 @@ body {
 }
 
 .foreground {
+  width: 100%;
   background: #fff;
   position: relative;
   z-index: 100;
   text-align: center;
 }
+
 .indexCover{
   height: 350px;
   position: fixed;
@@ -119,23 +115,17 @@ width:150px; /* fixed width */
 text-decoration:none; 
 margin-left: 40px;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 735px){
+  #nav {
+    display: none;
+  }
+}
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #555;
   background-color: #f8f8f8;
   opacity: 0.8;
-}
-
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
-  #nav{
-  margin-left:-50%; /* negative margin equal to half the width */
-  width:667px;
-}
-  #nav a {
-    width:-30%; /* fixed width */
-    margin-left: 1px;
-    font-size: 10px;
-  }
 }
 
 .regular {
@@ -180,6 +170,16 @@ margin-left: 40px;
   width: 100%;
   background: #f0f0f0; 
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 735px){
+  .cover{
+    height: 260px;
+  }
+  .profile {
+   margin-top: 210px;
+  }
+}
+
  @font-face{
     font-family: myFont2;
     src:url(fonts/REGULAR.OTF);
@@ -206,7 +206,40 @@ margin-left: 40px;
     box-shadow: 0 0.15em 0 #002525;
     -webkit-box-shadow: 0 0.15em 0 #002525;
     -webkit-transition: background .3s linear;
-    transition: background 0.3s linear; }
+    transition: background 0.3s linear; 
+  }
+.project-button{
+    display: none;
+    position: relative;
+    margin: auto;
+    max-width: 10em;
+    margin-top: 1.8em;
+}
+  .project-button a:hover{
+    opacity: 0.5;
+    text-decoration: none;
+  }
+  .project-button .resume {
+    font-family: myFont2;
+    color: white;
+    background: #005C5C;
+    text-align: center;
+    padding: 0.4em 0;
+    border-radius: 0.3em;
+    opacity: 0.85;
+    box-shadow: 0 0.15em 0 #002525;
+    -webkit-box-shadow: 0 0.15em 0 #002525;
+    -webkit-transition: background .3s linear;
+    transition: background 0.3s linear; 
+  }
+@media only screen and (min-device-width: 320px) and (max-device-width: 735px){
+    .project-button{
+      display: inline;
+  }
+    .project-button .resume {
+      padding: 0.5em 3.3em;
+  }
+}
 
 @font-face{
   font-family: myFont;
@@ -270,20 +303,14 @@ a {
     top: 4em; 
   }
 
-@media screen and (min-width: 26.25em) {
-  .footer h4 {
-    letter-spacing: 0.6em; 
-  } 
-}
 /* LINKS */
 .links {
   list-style: none;
-  margin: 30px 0;
   margin: 1.875em 0; 
 }
+
   .links li {
     display: inline-block;
-    margin: 0 25px;
     margin: 0 1.5625em; 
   }
     .links li a {
@@ -296,18 +323,14 @@ a {
       }
     .links li .link-to {
       width: 7.5em;
-      font-size: 14px;
       font-size: 0.875em;
       color: #fff;
       position: absolute;
-      bottom: 10px;
       bottom: 0.625em;
       left: -2.5em;
       line-height: 100%;
       opacity: 0;
-      padding: 6px 0;
       padding: 0.375em 0;
-      border-radius: 4px;
       border-radius: 0.25em;
       -webkit-transform: scale(0.25);
       -ms-transform: scale(0.25);
@@ -317,14 +340,10 @@ a {
     }
       .links li .link-to:after {
         content: "";
-        width: 16px;
         width: 1em;
-        height: 16px;
         height: 1em;
         left: 50%;
-        bottom: -3px;
         bottom: -0.1875em;
-        margin-left: -8px;
         margin-left: -0.5em;
         position: absolute;
         z-index: -1;
@@ -347,13 +366,6 @@ a {
       .links li .balance .link-to:after, .links li .pinterest .link-to:after, .links li .dribbble .link-to:after, .links li .github .link-to:after, .links li .linkedin .link-to:after {
         background: #494949; 
       }
-
-@media screen and (max-width: 40em) {
-  .links li {
-    margin: 0 15px;
-    margin: 0 0.9375em; 
-    } 
-  }
 
 .animated:hover {
   -webkit-animation: wobble .75s both;
@@ -431,6 +443,7 @@ a {
   display: inline-block;
   width: 2.5em;
   height: 2.5em; 
+  z-index: -1;
 }
 
 .icon-behance,.icon-github, .icon-linkedin {
@@ -441,10 +454,15 @@ a {
 
 /*SKILLS*/
 .skillprofile {
+  width: 100%;
   margin-top: 300px;
   margin-bottom: 2em; 
 }
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 735px){
+  .skillprofile {
+    margin-top: 220px;
+  }
+}
 @font-face{
   font-family: TitleFont;
   src:url(fonts/SemiBold.ttf);
@@ -484,6 +502,12 @@ a {
   color:#2B2E2E;
 }
 
+ .triangle{
+   width: 0.6em;
+   height:0.6em;
+   fill:grey;
+ }
+ 
 div[subsetMark] a:link{
   color:#005C5C;
 }
@@ -497,11 +521,7 @@ div[subsetMark] a:hover{
 .icon-github{
   border-radius: 7px;
 }
-.triangle{
-  width: 0.6em;
-  height:0.6em;
-  fill:grey;
-}
+
 #titlehr{
   width: 70%;
   margin: -1em auto;
@@ -547,8 +567,6 @@ div[contentMark]{
 }
 
 
-
-
 /*Project*********************************************************************/
 
 #projectWrapper{
@@ -569,8 +587,8 @@ div[contentMark]{
   opacity: 0.5;
 }
 #divImg1{
-  width: 250px;
-  height:200px;
+  width: 200px;
+  height:150px;
   margin-right: 50px;
   -webkit-flex: 1;
           flex: 1;
@@ -591,38 +609,12 @@ div[contentMark]{
 }
 
 /*************about*************************************/
-#contactWrap{
-  display: -webkit-flex;
-  display: flex;
+#contactWrap{    
+  width: 100%;
   justify-content: center;
 }
-  #contactMe{
-    float: left;
-    margin-left: 50px;
-    flex-direction:row;
-    -webkit-flex-direction:row;
-  }
-#contactInfo{
-  z-index: -1;
-}
-#contactImg{
-  margin-top:-5px;
-  height: 30px;
-  margin-left: 30px;
-}
-#contactImg2{
-  margin-top:-2px;
-  margin-left: -21px;
-  height: 30px;
-}
+
 #moreAbout{
+  width: 100%;
   text-align: center;
-}
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
-  #contactWrap{
-    width: 375px;
-  }
-  #contactMe{
-    width: 100%;
-  }
 }
