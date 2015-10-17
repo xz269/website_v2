@@ -577,7 +577,7 @@ div[contentMark]{
 
 #divImg{
   width: 100%;
-  margin-left: 50px;
+  margin-left: 70px;
   flex-direction:row;
   -webkit-flex-direction:row;
   float: left;
@@ -587,25 +587,17 @@ div[contentMark]{
   opacity: 0.5;
 }
 #divImg1{
-  width: 200px;
-  height:150px;
-  margin-right: 50px;
+  width: 230px;
+  height:180px;
   -webkit-flex: 1;
           flex: 1;
+  margin-right: 50px;
   margin-bottom: 70px;
   box-shadow: 7px 3px 2px #eee;
   border: 1px solid #949E9E;
   box-sizing: border-box;
   border-radius: 6px;
-}
-#divImg2{
-  width: 220px;
-  height:200px; 
-  -webkit-flex: 1;
-          flex: 1;
-  margin-bottom: 50px;
-   margin-right: 50px;
-  box-shadow: 7px 3px 2px #eee;
+  z-index:1
 }
 
 /*************about*************************************/
@@ -617,4 +609,42 @@ div[contentMark]{
 #moreAbout{
   width: 100%;
   text-align: center;
+}
+
+/*new part*/
+
+.wow {
+    display: inline;
+    position:relative;
+    width: 230px;
+     height:180px;
+     margin-right: 50px;
+  margin-bottom: 70px;
+    -webkit-transition: opacity 0.8s ease-in-out;
+    -moz-transition: opacity 0.8s ease-in-out;
+    -o-transition: opacity 0.8s ease-in-out;
+    -ms-transition: opacity 0.8s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.overlay {
+    position:absolute;
+    width: 230px;
+    height:70px;
+    margin-right: 50px;
+    margin-bottom: 70px;
+    top:0;
+    left:0;
+    z-index:2;
+    opacity:0;
+}
+.wow:hover > a > .overlay {
+  overflow: hidden;
+    opacity:10;
+    width: 230px;
+    height:180px height:auto;
+    padding:20px;
+    display:block;
+    font-weight: bold;
+    background:rgba(255, 255, 255, 0.8)
 }
