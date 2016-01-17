@@ -604,8 +604,13 @@ div[contentMark]{
 #contactWrap{    
   width: 100%;
   justify-content: center;
+  font-family: myFont2;
 }
-
+.contactInfo{
+  font-size: 20px;
+  line-height: 35px;
+  font-family: myFont2;
+}
 #moreAbout{
   width: 100%;
   text-align: center;
