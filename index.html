@@ -30,38 +30,42 @@
 	  ga('send', 'pageview');
 
 	</script>
-	
-	<!-- Modernizr -->
-	<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>-->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	  
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-	<script>
-	$(function() {
-	  $('a[href*=#]:not([href=#])').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+		    $('.collapse').on('show.bs.collapse', function() {
+		        var id = $(this).attr('id');
+		        $('a[href="#' + id + '"]').closest('.panel-heading').addClass('active-faq');
+		        $('a[href="#' + id + '"] .panel-title span').html('<i class="glyphicon glyphicon-minus"></i>');
+		    });
+		    $('.collapse').on('hide.bs.collapse', function() {
+		        var id = $(this).attr('id');
+		        $('a[href="#' + id + '"]').closest('.panel-heading').removeClass('active-faq');
+		        $('a[href="#' + id + '"] .panel-title span').html('<i class="glyphicon glyphicon-plus"></i>');
+		    });
+		});
+    </script>
 
-	      var target = $(this.hash);
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	      if (target.length) {
-	        $('html,body').animate({
-	          scrollTop: target.offset().top
-	        }, 1000);
-	        return false;
-	      }
-	    }
-	  });
-	});
-	</script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>  
 </head>
-<body>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 	<!--navigation bar-->
-	<nav class="fixed-nav-bar" >
-	    <div class="navContainer">
+	<nav class="fixed-nav-bar navbar navbar-default navbar-fixed-top" role="navigation">
+	    <div class="navContainer collapse navbar-collapse navbar-ex1-collapse">
  			<ul>
-				<li><a href="index.html">HOME</a></li>
-				<li><a href="#resume">RESUME</a></li>
-				<li><a href="#portfolio">PORTFOLIO</a></li>
-				<li><a href="#contact">CONTACT</a></li>
+				<li><a class="page-scroll" href="index.html">HOME</a></li>
+				<li><a class="page-scroll" href="#resume">RESUME</a></li>
+				<li><a class="page-scroll" href="#portfolio">PORTFOLIO</a></li>
+				<li><a class="page-scroll" href="#skill">SKILLS</a></li>
+				<li><a class="page-scroll" href="#course">COURSES</a></li>
+				<li><a class="page-scroll" href="#contact">CONTACT</a></li>
 	     	</ul>
 	    </div>
 	</nav>
@@ -74,8 +78,10 @@
 				<span class="subtitle">|| Product Designer ||</span>
 			</h2>
 		</div>
+		<!--
 		<a href="#resume"><img class="arrowDown" src="img/down.png" alt="arrowDown" width="22px" height="15px"></a>
 	</div>
+		-->
 
 	<!--resume part-->
 	<div id="resume">
@@ -124,7 +130,9 @@
 		Sketch, Photoshop, Illustrator, UI Design, Branding,<br>
 		Google Analytics, Public Relations, Market Research</p>
 		<a href="doc/zxq_resume.pdf" target="_blank"><button class="button">Go to My Resume</button></a>
+	<!--
 		<a href="#portfolio"><img class="arrowDownB" src="img/downB.png" alt="arrowDown" width="22px" height="15px"></a>
+	-->
 	</div>
 	<!--portfolio part-->
 	<div id="portfolio">
@@ -180,7 +188,473 @@
 				    <p class="imgDescription">Java Programming</p>
 				</a>
 		</div>
-		<a href="#contact"><img class="arrowD" src="img/down.png" alt="arrowDown" width="22px" height="15px"></a>
+		<!--
+		<a href="#skill"><img class="arrowD" src="img/down.png" alt="arrowDown" width="22px" height="15px"></a>
+	-->
+	</div>
+
+	<!--skills part-->
+	<div id="skill">
+		<br>
+		<div class="Container">
+			<p class="skillHead"><span>|| </span>Skills</p>
+		</div>
+		<!-- tabs left -->
+        <div class="tableft tabbable tabs-left">
+	        <ul class="nav nav-tabs" id="myTab">
+	          <li class="active"><a href="#a" data-toggle="tab">Engineering</a></li>
+	          <li><a href="#b" data-toggle="tab">UX / UI Design</a></li>
+	          <li><a href="#c" data-toggle="tab">Business</a></li>
+	          <li><a href="#d" data-toggle="tab">Communication</a></li>
+	          <li><a href="#e" data-toggle="tab">Agile Methodology</a></li>
+	          <li><br><br><br><br><br><br><br><br><br><br><br><br></li>
+	        </ul>
+	        <div class="tab-content">
+			    <div class="tab-pane active" id="a">
+			    	<dl>
+			    		<dt>Python</dt>
+			    		<dd>Self Learn Python via CS61A</dd>
+			    		<br>
+			    		<br>
+			    		<dt>Java</dt>
+			    		<dd>Learn Java at De Anza College during the summer quarter. Be able to understand: Class Concept,Variables declaration, assignment and constant definition, User Interaction in both Command line (Scanner) and Simple User Interface (JPanel), Decision Statements (if statement, switch cases),
+			    		Control Flow (for loop, while loop), Methods declaration and basic codes refactoring, Arrays and ArrayList, Basic Java Exception handling, File I/O.
+			    		</dd>
+			    		<br>
+			    		<br>
+			    		<dt>HTML & CSS</dt>
+			    		<dd>Learn from both Hong Kong Baptist University and De Anza College. Including the following topics:HTML and HTML5 elements, Entities and Validation, HTML5 Visual Elements, CSS3, HTML5 Form controls, Box Models, Layout with Styles, Tables, Multimedia, Animation.
+			    		</dd>
+			    		<br>
+			    		<br>
+			    		<dt>Github</dt>
+			    		<dd>Picked up Github by constantly pushing my code onto it. Have basic understanding on commit, push and merge operations.</dd>
+			    	</dl>
+			    </div>
+			    <div class="tab-pane" id="b">
+			    	<dl>
+			    		<dt>Photoshop</dt>
+			    		<dd>Learned from the course named Computer Visual Design at Hong Kong Baptist University. Keep using this skill in many of my projects. </dd>
+			    		<br>
+			    		<br>
+			    		<dt>Adobe Illustrator</dt>
+			    		<dd>Learned from the course named Computer Visual Design at Hong Kong Baptist University. Keep using this skill in many of my projects.</dd>
+			    		<br>
+			    		<br>
+			    		<dt>Adobe Dreeamweaver</dt>
+			    		<dd>Self learned Dreamweaver from the video sources provided by Adobe.</dd>
+			    		<br>
+			    		<br>
+			    		<dt>Balsamiq Mockups</dt>
+			    		<dd>Self learned Balsamiq Mockups, using Balsamiq Mockups to create website user interface mockups.</dd>
+			    		<br>
+			    		<br>
+			    		<dt>Sketch3</dt>
+			    		<dd>Self learned Sketch, using it to create website UI designs</dd>
+			    	</dl>
+			    </div>
+			    <div class="tab-pane" id="c">
+			    	<dl>
+			    		<dt>Marketing & Marketing Research</dt>
+			    		<dd>Situation Analysis, Analyzing Marketing Opportunities, Identifying and Selecting Target Markets and Market Segments, Marketing strategies, Planning marketing programs. Marketing Research, Public Relations and Advertising Research, Qualitative and Quantitative research methodologies.</dd>
+			    		<br>
+			    		<dt>Statistics and Data Analysis</dt>
+			    		<dd>Basic Statistics Terminology, Null Hypothesis and Alternative Hypothesis, Interval estimation, Significance, Correlation.</dd>
+			    		<br>
+			    		<dt>Consumer Behavior</dt>
+			    		<dd>Consumer Behavior Models, Consumer Purchase Decision-Marking Process, Social Factors Affecting the Purchase Decision, Psychological Factors Affecting the Purchase Decision, Income impact on the Purchase Decision, Marketing Factors Affecting the Purchase Decision.</dd>
+			    		<br>
+						<dt>Strategic Planning & Human Resources Management</dt>
+			    		<dd>Strategic Planning Models and Theories; Basic Human Resources Theories,Strategic Human Resources Management and Planning, Managing a Diverse Workforce, Job Analysis, Recruitment and Selection process, Compensation and Benefits Analysis, Training and Career Development, Performance Management of the Human Resources, Labor-Management Relation and Bargaining,Volunteers Selection and Training.</dd>
+			    		<br>
+			    		<dt>Organization Management</dt>
+			    		<dd>The Environment Analysis of an Organization, Organization Structure, Organizational Culture, Managing and Motivating People, Strategic Planning, Performance Management, Managing Citizen Involvement, Government Contracting, Managing Organizational Change and Innovation</dd>
+			    	</dl>
+			    </div>
+			    <div class="tab-pane" id="d">
+			    	<dl>
+			    		<dt>Integrated Marketing Communication</dt>
+			    		<dd>Organization Culture, Marketing Mix, Co-Marketing Analysis, Integrated Marketing Communication Models and Strategis, Media Relations, Branding.</dd>
+			    		<br>
+			    		<br>
+			    		<dt>Public Relation / Advertising Strategic Planning and Management</dt>
+			    		<dd>Planning PR and Advertising Proposals, Implement Proposals and Management.</dd>
+			    		<br>
+			    		<br>
+			    		<dt>Professional Communication Skill</dt>
+			    		<dd>Professional Communication Theory, Technical writing, Virtual training, In-person communication.</dd>
+			    		<br>
+			    		<br>
+			    		<dt>Interpersoanl Communication and Persuation</dt>
+			    		<dd>Cross-cultural communication, Emotional Intelligence, Verbal and Non-Verbal Communication, Principles of Interpersonal Communication, Personal Appearance, Stereotype in Interpersonal Communication, Theories of Persuasion.</dd>
+			    		<br>
+			    		<br>
+			    		<dt>Emotional Intelligence</dt>
+			    		<dd>Perceiving Emotions, Using Emotions, Understanding Emotions, Managing Emotions, and Virtual Practice.</dd>
+			    	</dl>
+			    </div>
+			    <div class="tab-pane" id="e">
+			    	<dl>
+			    		<dt>Agile Methodology</dt>
+			    		<dd>Self learn Agile Methodology and utilized it in one of my projects. </dd>
+					</dl>
+				</div>
+			</div>
+        </div>
+        <!--
+		<a href="#contact"><img class="arrowDownS" src="img/downB.png" alt="arrowDown" width="22px" height="15px"></a>
+	-->
+	</div>
+
+	<!--courses-->
+	<div id="course">
+		<br>
+		<div class="Container">
+			<p><span>|| </span>Courses</p>
+		</div>
+		<!--tab of the course-->
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-6 col-md-offset-3">
+		            <!-- Nav tabs category -->
+		            <ul class="nav nav-tabs faq-cat-tabs">
+		                <li class="active"><a href="#faq-cat-1" data-toggle="tab">Rutgers,The State University of New Jersey</a></li>
+		                <li><a href="#faq-cat-2" data-toggle="tab">Hong Kong Baptist University</a></li>
+		                <li><a href="#faq-cat-3" data-toggle="tab">De Anza College</a></li>
+		            </ul>
+		    
+		            <!-- Tab panes -->
+		            <div class="tab-content faq-cat-content">
+		                <div class="tab-pane active in fade" id="faq-cat-1">
+		                    <div class="panel-group" id="accordion-cat-1">
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-1">
+		                                    <h4 class="panel-title">
+		                                        Technology and Public Administration
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-1-sub-1" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Implications for public managers to fully comprehend the skills and tools necessary for information management technologies, the course explores the role of eGovernment, citizen engagement through Web 2.0 and social media, the exploration of how policy and technology intersect, and how technology can be best managed through various governance models.
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-2">
+		                                    <h4 class="panel-title">
+		                                        Applied Statistics
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-1-sub-2" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Statistical tools and techniques used to inform policy analysis and management decision-making. Covers descriptive statistics, graphing data, confidence intervals, significance testing, correlation, cross-tabulation, and regression, including an introduction to multiple regression. Encourages hands-on work with real data, use of statistical software, and the effective presentation of statistical information.
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-3">
+		                                    <h4 class="panel-title">
+		                                        Applied Research Design
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-1-sub-3" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Covers issues central to understanding and conducting applied policy and management research. These issues include identifying research questions, developing logic models, selection of appropriate quantitative or qualitative methods, measuring outcomes, survey research and other sources of primary and secondary data, experimental and non-experimental strategies for evaluating programs, and the ethical and political issues involved in producing and using evidence to inform policy and practice.
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-4">
+		                                    <h4 class="panel-title">
+		                                        Managing Organizations
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-1-sub-4" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Theories of organizational behavior and performance as applied to public and nonprofit sector agencies; includes organizational authority systems, relationships between public and private organizations, development and fulfillment of organizational mandates in the public sector, and use of resources within organizations.
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-5">
+		                                    <h4 class="panel-title">
+		                                        Strategic Planning
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-1-sub-5" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Strategic planning and management in the public and nonprofit sectors, including methods that facilitate achieving organizational goals in a changing environment. Attention paid to forecasting, goal and objective setting, strategy building, and resource mobilization.
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-6">
+		                                    <h4 class="panel-title">
+		                                        Human Resources Administration
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-1-sub-6" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Human resources administration in public and nonprofit settings, including human resource planning, staffing, development, and compensation. Behavioral and environmental determinants are examined, including production technology, market factors, service delivery, and government regulations.
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-7">
+		                                    <h4 class="panel-title">
+		                                        Budgeting Systems
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-1-sub-7" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Budget concepts and processes used by the American government and its administrative units. Provides essential skills and experience in budgetary analysis and management applicable to nonprofit as well as public sector agencies.
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-9">
+		                                    <h4 class="panel-title">
+		                                        Performance Measurement and Reporting
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-1-sub-9" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    The processes of public and nonprofit performance measurement and management are explored in depth. 
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="tab-pane fade" id="faq-cat-2">
+		                    <div class="panel-group" id="accordion-cat-2">
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-1">
+		                                    <h4 class="panel-title">
+		                                        Information Technology
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-2-sub-1" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Introduces fundamental computer literacy, which includes hardware and software topics, with lecture and hands-on instruction. Computer applications include operating systems, word processing, spreadsheets, databases and the basics of using networked computers (e.g., e-mail and the Internet).
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-2">
+		                                    <h4 class="panel-title">
+		                                        Computer Visual Design
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-2-sub-2" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Learn how to Create Identity (logos and branding), publications (magazines, newspapers and books), print advertisements, posters, billboards, website graphics and elements, signs and product packaging. Tools: Photoshop CS5 and AI CS5
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-3">
+		                                    <h4 class="panel-title">
+		                                        Statistics
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-2-sub-3" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Basic Statistics Terminology, Null Hypothesis and Alternative Hypothesis, Interval estimation, Significance, Correlation.
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-4">
+		                                    <h4 class="panel-title">
+		                                        Communication Research and Research in Public Relations and Advertising
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-2-sub-4" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Processes of communication research as a social science; variables, hypotheses, and theories; conceptual and operational definition; sampling; research design; statistics; use of computers for research. Designs and measurements for conducting empirical analyses of communication activities in both laboratory and business settings.
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <!--
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-5">
+		                                    <h4 class="panel-title">
+		                                        Research in Public Relations and Advertising
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-2-sub-5" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Designs and measurements for conducting empirical analyses of communication activities in both laboratory and business settings.
+		                                </div>
+		                            </div>
+		                        </div>
+		                    	-->
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-6">
+		                                    <h4 class="panel-title">
+		                                        Introduction to marketing
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-2-sub-6" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    The role of marketing in business and society. The marketing decision process in domestic and international settings.
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-7">
+		                                    <h4 class="panel-title">
+		                                        Integrated Marketing Communications
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-2-sub-7" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Organization Culture, Marketing Mix, Co-Marketing Analysis, Integrated Marketing Communication Models and Strategis, Media Relations, and Branding.
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-8">
+		                                    <h4 class="panel-title">
+		                                        Consumer Behavior
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-2-sub-8" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Understanding consumer decision processes; steps in decision making, including need recognition, perception, cognition and attitude formation; effect of environmental social, psychological, and individual difference factors on consumer decision making.
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-9">
+		                                    <h4 class="panel-title">
+		                                        Communication Related Courses
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-2-sub-9" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                     Professional Communication Skills, Interpersonal Communication, Media Writing, Persuasion and Social Influence, Emotional intelligence, Communication Theory, Media, culture and society.
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-10">
+		                                    <h4 class="panel-title">
+		                                        Public Relations and Advertising Strategic Planning and Management
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-2-sub-10" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                     This course brings students to the advanced practices associated with planning public relations and advertising campaign. Student could get more solid campaign planning and implementation skills from real case practice.
+		                                </div>
+		                            </div>
+		                        </div>
+
+		                    </div>
+		                </div>
+		                <div class="tab-pane fade" id="faq-cat-3">
+		                    <div class="panel-group" id="accordion-cat-3">
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-3-sub-1">
+		                                    <h4 class="panel-title">
+		                                        Introduction to Java
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-3-sub-1" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    Class Concept,Variables declaration, assignment and constant definition, User Interaction in both Command line (Scanner) and Simple User Interface (JPanel), Decision Statements (if statement, switch cases),
+			    		Control Flow (for loop, while loop), Methods declaration and basic codes refactoring, Arrays and ArrayList, Basic Java Exception handling, File I/O.
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="panel panel-default panel-faq">
+		                            <div class="panel-heading">
+		                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-3-sub-2">
+		                                    <h4 class="panel-title">
+		                                        Web development
+		                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		                                    </h4>
+		                                </a>
+		                            </div>
+		                            <div id="faq-cat-3-sub-2" class="panel-collapse collapse">
+		                                <div class="panel-body">
+		                                    HTML and HTML5 elements, Entities and Validation, HTML5 Visual Elements, CSS3, HTML5 Form controls, Box Models, Layout with Styles, Tables, Multimedia, and Animation.
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+
+
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<div class="schoolPic">
+			<img src="img/rutgers.png" alt="rutgers">
+			<img src="img/hkbu.png" id="hkbu" alt="hkbu">
+			<img src="img/de.png" id="de" alt="deAnza">
+		</div>
+		<!--
+		<a href="#contact"><img class="arrowDownCo" src="img/downB.png" alt="arrowDown" width="22px" height="15px"></a>
+	-->
 	</div>
 	<!--contact part-->
 	<div id="contact">
@@ -215,9 +689,10 @@
 			<img class="icon"src="img/github17.png" alt="github">
 			<img class="icon"src="img/behance6.png" alt="behance">
 		</div>
+		<!--
 		<a href="index.html"><img class="up" src="img/up.png" alt="arrowuo" width="22px" height="15px"></a>
+	-->
 	</div>
-	<!--footer-->
 	<footer>
 		<div class="footerInfo"></div>
 		<p class="copy">Copyright &copy 2016. All rights reserved by Xieqi Zhang. </p>

@@ -52,7 +52,7 @@ body {
 }
 .navContainer ul li a:focus,
 .navContainer ul .active a{
-	text-decoration: line-through;
+	border-bottom: solid 1px #000;
 }
 
 /* background */
@@ -328,17 +328,16 @@ body {
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
-/* Contact*/
-.me{
-	z-index: 44;
-	margin-left:300px;
-	position:absolute;
-	top:2300px;
-	width: 220px;
-	border-radius: 50%;
-	overflow: hidden;
+/* skills*/
+.tableft{
+	z-index: 777;
+	position: absolute;
+	left: 190px;
+	width: 1000px;
+	top:2270px;
+	font-family: Avenir;
 }
-.touch{
+.skillHead{
 	z-index: 888;
 	position: absolute;
 	top: 2150px;
@@ -350,6 +349,173 @@ body {
 	font-weight: bold;
 	letter-spacing: .5px;
 }
+
+/* custom inclusion of right, left and below tabs */
+
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+
+.tab-content > .tab-pane{
+  display: none;
+}
+
+.tab-content > .active{
+  display: block;
+}
+
+.tabs-left > .nav-tabs > li {
+  float: none;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: #ffffff;
+}
+
+@keyframes topDownS {
+    50%  {top: 2745px;}
+    100% {top: 2760px;}
+}
+.arrowDownS{
+	position:absolute;
+	margin: 0 50%;
+	top: 2760px;
+	text-align: center;
+	z-index: 555;
+	animation-name: topDownS;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+/*course*/
+@keyframes topDownCo {
+    50%  {top: 3465px;}
+    100% {top: 3480px;}
+}
+.arrowDownCo{
+	position:absolute;
+	margin: 0 50%;
+	top: 3480px;
+	text-align: center;
+	z-index: 555;
+	animation-name: topDownCo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/* course */
+.container{
+	position: absolute;
+	top: 2920px;
+	left: 120px;
+	z-index: 776;
+	width: 1500px;
+	font-family: Avenir;
+}
+.faq-cat-content {
+    margin-top: 5px;
+}
+
+.faq-cat-tabs li a {
+    padding: 15px 10px 15px 10px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    color: #777777;
+}
+
+.nav-tabs li a:focus,
+.panel-heading a:focus {
+    outline: none;
+}
+
+.panel-heading a,
+.panel-heading a:hover,
+.panel-heading a:focus {
+    text-decoration: none;
+    color: #777777;
+}
+
+.faq-cat-content .panel-heading:hover {
+    background-color: #efefef;
+}
+
+.active-faq {
+    border-left: 5px solid #888888;
+}
+
+.panel-faq .panel-heading .panel-title span {
+    font-size: 15px;
+    font-weight: normal;
+}
+.schoolPic{
+	position: absolute;
+	z-index: 777;
+	top: 2950px;
+	left: 190px;
+	width: 300px;
+}
+.schoolPic img{
+	margin-top: 60px;
+	float: left;
+	width: 200px;
+	height: 60px;
+
+}
+#hkbu{
+	margin-left: 25px;
+}
+#de{
+	margin-left: -5px;
+}
+/* Contact*/
+.me{
+	z-index: 44;
+	margin-left:300px;
+	position:absolute;
+	top:3700px;
+	width: 220px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.touch{
+	z-index: 888;
+	position: absolute;
+	top: 3565px;
+	text-align: left;
+	margin-left: 120px;
+	padding: 50px;
+	font-family: "Times New Roman", Georgia, Serif;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: .5px;
+}
+
 .touch span{
 	font-weight: normal;
 	font-size: 20px;
@@ -371,21 +537,21 @@ body {
 	z-index: 559;
 	position: absolute;
 	margin-left: 200px;
-	top: 2600px;
+	top: 4030px;
 	letter-spacing: 1px;
 }
 .otherContact{
 	z-index: 559;
 	position: absolute;
 	margin-left: 800px;
-	top: 2500px;
+	top: 3940px;
 	letter-spacing: 1px;
 }
 .ContactDetail{
 	width: 600px;
 	z-index: 560;
 	margin-left: 580px;
-	top: 2330px;
+	top: 3750px;
 	letter-spacing: .5px;
 	position: absolute;
 	text-align: justify;
@@ -397,7 +563,7 @@ body {
 	position: absolute;
 	z-index: 559;
 	width: 40px;
-	top: 2499px;
+	top: 3940px;
 }
 .icon{
 	width: 40px;
@@ -405,13 +571,13 @@ body {
 	margin-left: 740px;
 }
 @keyframes up{
-    50%  {top: 2765px;}
-    100% {top: 2780px;}
+    50%  {top: 4175px;}
+    100% {top: 4180px;}
 }
 .up{
 	position:absolute;
 	left:50%;
-	top: 2780px;
+	top: 4180px;
 	z-index: 777;
 	animation-name: up;
     animation-duration: 2s;
