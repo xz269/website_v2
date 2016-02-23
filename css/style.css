@@ -426,7 +426,7 @@ body {
 
 /* course */
 .container{
-	max-width: 1000px;
+	max-width: 900px;
 	position: absolute;
 	top: 2920px;
 	margin-left: 290px;
@@ -434,8 +434,11 @@ body {
 	z-index: 776;
 	font-family: Avenir;
 	font-size: 12px;
+	overflow: hidden;
 }
-
+.nav, .nav-tabs, .faq-cat-tabs{
+	width: 600px;
+}
 .faq-cat-content {
     margin-top: 5px;
     width: 600px;
