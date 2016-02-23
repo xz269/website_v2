@@ -238,8 +238,8 @@ body {
 
 .button{
 	position:absolute;
-	left: 555px;
 	top: 1270px;
+	left: 620px;
 	z-index: 556;
 	width: 230px;
 	font-size: 14px;
@@ -487,6 +487,11 @@ body {
 #de{
 	margin-left: -5px;
 }
+/*
+@media only screen and (min-device-width: 320px) and (max-device-width: 735px){
+  
+}
+*/
 /* Contact*/
 .me{
 	z-index: 44;
