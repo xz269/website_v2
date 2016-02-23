@@ -111,7 +111,6 @@ body {
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
-
 /* Resume Part */
 @keyframes topDownB {
     50%  {top: 1335px;}
@@ -236,17 +235,11 @@ body {
 .job_3{
 	top:1130px;
 }
-.skills{
-	margin-left: 300px;
-	position: absolute;
-	top: 1245px;
-	z-index: 333;
-	letter-spacing: 1px;
-}
+
 .button{
 	position:absolute;
-	margin: 0 800px;
-	top: 1260px;
+	left: 555px;
+	top: 1270px;
 	z-index: 556;
 	width: 230px;
 	font-size: 14px;
