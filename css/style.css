@@ -516,24 +516,7 @@ body {
 	border-radius: 50%;
 	overflow: hidden;
 }
-.touch{
-	z-index: 888;
-	position: absolute;
-	top: 3565px;
-	text-align: left;
-	margin-left: 120px;
-	padding: 50px;
-	font-family: "Times New Roman", Georgia, Serif;
-	font-size: 25px;
-	font-weight: bold;
-	letter-spacing: .5px;
-}
 
-.touch span{
-	font-weight: normal;
-	font-size: 20px;
-	color: grey;
-}
 .contactName{
 	margin-top: -260px;
 	color: #4d4d4d;
