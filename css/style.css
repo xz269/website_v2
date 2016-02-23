@@ -587,7 +587,6 @@ body {
     margin-right: auto;
     margin-top: 0;
     background-color: #1a1a1a;
-    overflow: hidden;
 }
 .copy{
 	z-index: 3;
@@ -597,7 +596,4 @@ body {
 	margin-top: -80px;
 	font-family: Avenir;
 	letter-spacing: 1px;
-}
-footer {
-	overflow: hidden;
 }
