@@ -6,16 +6,28 @@ html{font-size:100%;}
 @media(min-width:60em){html{font-size: 100%}}
 /*tablets*/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	.skills{
+		display: none;
+	}
 	.container{
 		font-size: 5px;
-		width: 40%;
+		width: 300px;
+	}
+	footer{
+		width: 100%;
 	}
 }
 /*phone*/
 @media only screen and (min-width: 0px) and (max-width: 679px) {
+	.skills{
+		display: none;
+	}
 	.container{
 		font-size: 5px;
-		width: 30%;
+		width: 200px;
+	}
+	footer{
+		width: 100%;
 	}
 }
 *, *:before, *:after {
