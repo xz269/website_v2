@@ -426,15 +426,16 @@ body {
 
 /* course */
 .container{
+	max-width: 1000px;
 	position: absolute;
 	top: 2920px;
-	margin-left: 140px;
+	margin-left: 290px;
 	margin-top: 60px;
 	z-index: 776;
-	width: 1280px;
 	font-family: Avenir;
 	font-size: 12px;
 }
+
 .faq-cat-content {
     margin-top: 5px;
     width: 600px;
@@ -442,17 +443,12 @@ body {
 .faq-cat-content h4{
 	font-size: 13.5px;
 }
-.faq-cat-tabs {
-	max-width: 600px;
-}
 .faq-cat-tabs li a {
-    padding: 15px 10px 15px 10px;
+    padding: 10px 8px 10px 8px;
     background-color: #ffffff;
     border: 1px solid #dddddd;
     color: #777777;
-    font-size: 14.5px;
-    font-weight: bold;
-
+    font-size: 14px;
 }
 
 .nav-tabs li a:focus,
@@ -485,7 +481,7 @@ body {
 	position: absolute;
 	z-index: 777;
 	margin-top: -520px;
-	margin-left:200px;
+	margin-left:250px;
 	width: 270px;
 }
 .schoolPic img{
@@ -496,7 +492,7 @@ body {
 
 }
 #hkbu{
-	margin-left: 25px;
+	margin-left: 20px;
 }
 #de{
 	margin-left: -5px;
