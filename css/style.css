@@ -442,6 +442,9 @@ body {
 .faq-cat-content h4{
 	font-size: 13.5px;
 }
+.faq-cat-tabs {
+	max-width: 600px;
+}
 .faq-cat-tabs li a {
     padding: 15px 10px 15px 10px;
     background-color: #ffffff;
