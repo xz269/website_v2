@@ -2,20 +2,6 @@ body {
 	background-color: #f2f2f2;
 }
 
-html{font-size:100%;} 
-@media(min-width:60em){html{font-size: 100%}}
-/*tablets*/
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-	nav, .bodyWrap, #resume, #portforlio, #skill, #course, footer{
-		display: none;
-	}
-}
-/*phone*/
-@media only screen and (min-width: 0px) and (max-width: 679px) {
-	nav, .bodyWrap, #resume, #portforlio, #skill, #course, footer{
-		display: none;
-	}
-}
 *, *:before, *:after {
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
