@@ -237,11 +237,10 @@ body {
 }
 .resumeWrap{
 	text-align: center;
-	margin-right: 200px;
 }
 .button{
-	position:absolute;
-	margin-top:-130px;
+	position:relative;
+	margin-top:-230px;
 	z-index: 556;
 	font-size: 14px;
 	font-family: Avenir;
