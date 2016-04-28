@@ -712,6 +712,7 @@ footer {
 }
 footer span.copyright {
     line-height: 40px;
+    color: white;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     text-transform: none
@@ -845,4 +846,12 @@ body {
 }
 .text-muted.> address > a{
     color: grey;
+}
+.text-justify{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.img-size{
+    width: 250px;
+    height: 250px;
 }
