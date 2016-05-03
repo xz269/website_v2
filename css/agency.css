@@ -829,6 +829,9 @@ ul.social-buttons li a:active {
     width: 400px;
     height: 250px;
 }
+.img-modal{
+    width: 1200px;
+}
 img::selection {
     background: 0 0
 }
@@ -848,10 +851,20 @@ body {
     color: grey;
 }
 .text-justify{
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-right: 50px;
 }
 .img-size{
     width: 250px;
     height: 250px;
+}
+.project-header{
+    width: 100%;
+    text-align: left;
+}
+.text-strong{
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+.link-color{
+    color: #fed136;
 }
