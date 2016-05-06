@@ -868,3 +868,8 @@ body {
 .link-color{
     color: #fed136;
 }
+.text-center{
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
